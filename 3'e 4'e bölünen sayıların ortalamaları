@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int i;
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Sayı Giriniz: ");
+        i = inp.nextInt();
+
+        int toplam3 = 0;
+        int toplam4 = 0;
+
+        for (int j = 0; j <= i; j++) {
+            if (j % 3 == 0) {
+                //System.out.println(j);
+                toplam3 += j;
+            }
+            if (j % 4 == 0) {
+                //System.out.println(j);
+                toplam4 += j;
+            }
+        }
+
+        int ort3;
+        // Ortalama hesaplamak için girilen i sayısı 3'e bölünür.
+        ort3 = toplam3 / (i / 3);
+        //System.out.println("Toplam: " + toplam3);
+        System.out.println("Ortalama(3): " + ort3);
+
+        int ort4;
+        // Ortalama hesaplamak için girilen i sayısı 4'e bölünür.
+        ort4 = toplam4 / (i / 4);
+        //System.out.println("Toplam: " + toplam4);
+        System.out.println("Ortalama(4): " + ort4);
+    }
+}
